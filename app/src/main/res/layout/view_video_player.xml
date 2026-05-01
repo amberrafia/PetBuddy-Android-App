@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/videoContainer"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    android:background="#FFFFFF">
+
+    <!-- ✅ THUMBNAIL IMAGE -->
+    <ImageView
+        android:id="@+id/imgThumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dog_grooming_thumbnail"
+        android:contentDescription="Dog grooming video thumbnail"/>
+
+    <!-- ▶ PLAY BUTTON -->
+    <ImageView
+        android:id="@+id/btnPlayPause"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center"
+        android:src="@android:drawable/ic_media_play"
+        android:background="@android:color/transparent"/>
+
+    <!-- 🎥 VIDEO VIEW (HIDDEN INITIALLY) -->
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</FrameLayout>

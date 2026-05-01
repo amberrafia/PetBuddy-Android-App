@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header with Name and Status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/txtUserName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="👤 User Name"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#333333"/>
+
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✅ Registered"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:background="#E8F5E8"
+                android:padding="4dp"
+                android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
+
+        <!-- Contact Information -->
+        <TextView
+            android:id="@+id/txtUserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📧 user@example.com"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/txtUserPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📱 +1234567890"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Pet Information -->
+        <TextView
+            android:id="@+id/txtPetInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🐾 Pet Name (Dog)"
+            android:textSize="14sp"
+            android:textColor="#4CAF50"
+            android:background="#E8F5E8"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Special Requirements -->
+        <TextView
+            android:id="@+id/txtSpecialRequirements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📝 Special Requirements: None"
+            android:textSize="12sp"
+            android:textColor="#FF9800"
+            android:background="#FFF3E0"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Registration Date -->
+        <TextView
+            android:id="@+id/txtRegistrationDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📅 Registered: Mar 12, 2024 at 10:30 AM"
+            android:textSize="12sp"
+            android:textColor="#999999"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

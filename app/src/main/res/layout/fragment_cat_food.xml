@@ -1,0 +1,47 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="🐱 Cat Food"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- ✅ ADD THIS BUTTON HERE -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="12dp">
+
+        <!-- 🐱 DRY CAT FOOD -->
+        <Button
+            android:id="@+id/btnDryCat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🐱 DRY CAT FOOD"
+            android:layout_marginEnd="12dp"/>
+
+        <!-- 🐱 WET CAT FOOD -->
+        <Button
+            android:id="@+id/btnWetCat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🐱 WET CAT FOOD"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/productContainer"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Products"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Main Categories -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/btnDogFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🐶 Dog Food"/>
+
+        <Button
+            android:id="@+id/btnCatFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🐱 Cat Food"
+            android:layout_marginStart="12dp"/>
+    </LinearLayout>
+
+    <!-- Dog Sub Categories -->
+    <LinearLayout
+        android:id="@+id/dogSubCategoryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/btnDry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dry"/>
+
+        <Button
+            android:id="@+id/btnWet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wet"
+            android:layout_marginStart="6dp"/>
+
+        <Button
+            android:id="@+id/btnPuppy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Puppy"
+            android:layout_marginStart="6dp"/>
+    </LinearLayout> <!-- ✅ CLOSED CORRECTLY -->
+
+    <!-- Product List -->
+    <LinearLayout
+        android:id="@+id/productContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+
+    <!-- Add Product -->
+    <Button
+        android:id="@+id/btnAddProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+ ADD NEW PRODUCT"
+        android:backgroundTint="#4E8F8B"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

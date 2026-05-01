@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 🌿 Primary Theme Colors (Soft Pink & Elegant) -->
+    <color name="primary">#F6C1CC</color>          <!-- Soft Pink -->
+    <color name="primary_dark">#E8A7B4</color>     <!-- Darker Pink -->
+    <color name="accent">#FF8A80</color>           <!-- Coral Pink -->
+    <color name="primary_light">#FCE4EC</color>    <!-- Very Light Pink -->
+    
+    <!-- 🌸 Soft Pink Theme Colors -->
+    <color name="soft_pink_light">#FCE4EC</color>  <!-- Very Light Pink -->
+    <color name="soft_pink_medium">#F6C1CC</color> <!-- Medium Pink -->
+    <color name="soft_pink_dark">#E8A7B4</color>   <!-- Dark Pink -->
+
+    <!-- 🏠 Background (Very Light & Clean) -->
+    <color name="background">#FFF9F7</color>       <!-- Warm White -->
+    <color name="surface">#FFFFFF</color>          <!-- Pure White -->
+
+    <!-- 📝 Text Colors (High Readability) -->
+    <color name="primary_text">#2E2E2E</color>     <!-- Dark Grey -->
+    <color name="secondary_text">#6B6B6B</color>   <!-- Medium Grey -->
+    <color name="hint_text">#9E9E9E</color>        <!-- Light Grey -->
+
+    <!-- ⚪ Common -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- ✅ Status Colors -->
+    <color name="success">#4CAF50</color>          <!-- Green -->
+    <color name="warning">#FF9800</color>          <!-- Orange -->
+    <color name="error">#F44336</color>            <!-- Red -->
+    <color name="info">#2196F3</color>             <!-- Blue -->
+
+    <!-- 🐾 Pet Category Colors -->
+    <color name="dog_color">#8D6E63</color>        <!-- Brown -->
+    <color name="cat_color">#9C27B0</color>        <!-- Purple -->
+    <color name="rabbit_color">#795548</color>     <!-- Light Brown -->
+    <color name="bird_color">#03A9F4</color>       <!-- Light Blue -->
+    <color name="hamster_color">#FF9800</color>    <!-- Orange -->
+
+    <!-- ➖ Dividers & Borders -->
+    <color name="divider">#EADADA</color>          <!-- Light Pink Grey -->
+    <color name="border">#E1BEE7</color>           <!-- Light Purple -->
+
+    <!-- 🧩 Card & Section Backgrounds -->
+    <color name="card_bg">#FFFFFF</color>          <!-- White -->
+    <color name="card_shadow">#20000000</color>    <!-- Light Shadow -->
+    
+    <!-- 👑 Admin Colors -->
+    <color name="admin_primary">#8E24AA</color>    <!-- Deep Purple (Better contrast) -->
+    <color name="admin_accent">#7B1FA2</color>     <!-- Darker Purple -->
+    <color name="admin_bg">#FCE4EC</color>         <!-- Very Light Pink -->
+
+    <!-- 💝 Adoption Status Colors -->
+    <color name="available">#4CAF50</color>        <!-- Green -->
+    <color name="pending">#FF9800</color>          <!-- Orange -->
+    <color name="adopted">#9E9E9E</color>          <!-- Grey -->
+
+    <!-- 🌈 Light Status Colors -->
+    <color name="success_light">#E8F5E8</color>    <!-- Light Green -->
+    <color name="warning_light">#FFF3E0</color>    <!-- Light Orange -->
+    <color name="error_light">#FFEBEE</color>      <!-- Light Red -->
+
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Dog face -->
+    <path
+        android:fillColor="#FF9E80"
+        android:pathData="M60,90 C75,90 87,78 87,63 C87,48 75,36 60,36 C45,36 33,48 33,63 C33,78 45,90 60,90 Z"/>
+
+    <!-- Left ear -->
+    <path
+        android:fillColor="#FF7043"
+        android:pathData="M40,45 C35,40 30,42 28,48 C26,54 30,60 35,62 C38,58 40,52 40,45 Z"/>
+
+    <!-- Right ear -->
+    <path
+        android:fillColor="#FF7043"
+        android:pathData="M80,45 C85,40 90,42 92,48 C94,54 90,60 85,62 C82,58 80,52 80,45 Z"/>
+
+    <!-- Left eye -->
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M50,58 C50,60.76 48.21,63 46,63 C43.79,63 42,60.76 42,58 C42,55.24 43.79,53 46,53 C48.21,53 50,55.24 50,58 Z"/>
+
+    <!-- Right eye -->
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M78,58 C78,60.76 76.21,63 74,63 C71.79,63 70,60.76 70,58 C70,55.24 71.79,53 74,53 C76.21,53 78,55.24 78,58 Z"/>
+
+    <!-- Nose -->
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M60,68 C62.76,68 65,70.24 65,73 C65,75.76 62.76,78 60,78 C57.24,78 55,75.76 55,73 C55,70.24 57.24,68 60,68 Z"/>
+
+    <!-- Mouth -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#3E2723"
+        android:strokeWidth="2"
+        android:pathData="M60,78 L60,82 M60,82 C55,82 52,80 50,78 M60,82 C65,82 68,80 70,78"/>
+
+    <!-- Paw print (decorative) -->
+    <path
+        android:fillColor="#FFAB91"
+        android:pathData="M25,25 C25,27.76 23.21,30 21,30 C18.79,30 17,27.76 17,25 C17,22.24 18.79,20 21,20 C23.21,20 25,22.24 25,25 Z"/>
+    <path
+        android:fillColor="#FFAB91"
+        android:pathData="M95,100 C95,102.76 93.21,105 91,105 C88.79,105 87,102.76 87,100 C87,97.24 88.79,95 91,95 C93.21,95 95,97.24 95,100 Z"/>
+</vector>

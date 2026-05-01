@@ -1,0 +1,235 @@
+{
+  "rules": {
+    "adoptablePets": {
+      ".read": true,
+      ".write": "auth != null",
+      "$petId": {
+        ".validate": "newData.hasChildren(['basicInfo', 'description', 'health', 'location', 'adoption', 'metadata'])",
+        "basicInfo": {
+          ".validate": "newData.hasChildren(['name', 'species', 'breed', 'age', 'gender', 'size'])",
+          "name": {
+            ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 50"
+          },
+          "species": {
+            ".validate": "newData.isString() && (newData.val() == 'dog' || newData.val() == 'cat' || newData.val() == 'rabbit' || newData.val() == 'bird')"
+          },
+          "breed": {
+            ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 50"
+          },
+          "age": {
+            ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 300"
+          },
+          "gender": {
+            ".validate": "newData.isString() && (newData.val() == 'male' || newData.val() == 'female')"
+          },
+          "size": {
+            ".validate": "newData.isString() && (newData.val() == 'small' || newData.val() == 'medium' || newData.val() == 'large')"
+          }
+        },
+        "adoption": {
+          "status": {
+            ".validate": "newData.isString() && (newData.val() == 'available' || newData.val() == 'pending' || newData.val() == 'adopted' || newData.val() == 'reserved')"
+          },
+          "fee": {
+            ".validate": "newData.isNumber() && newData.val() >= 0"
+          }
+        },
+        "metadata": {
+          "lastUpdated": {
+            ".validate": "newData.isNumber()"
+          },
+          "lastUpdatedBy": {
+            ".validate": "newData.isString()"
+          },
+          "version": {
+            ".validate": "newData.isNumber()"
+          }
+        }
+      }
+    },
+    "adoptionStatus": {
+      ".read": true,
+      ".write": "auth != null",
+      "$petId": {
+        "status": {
+          ".validate": "newData.isString() && (newData.val() == 'available' || newData.val() == 'pending' || newData.val() == 'adopted' || newData.val() == 'reserved')"
+        },
+        "timestamp": {
+          ".validate": "newData.isNumber()"
+        },
+        "userId": {
+          ".validate": "newData.isString() && newData.val() == auth.uid"
+        }
+      }
+    },
+    "injury_photos": {
+      ".read": true,
+      "$userId": {
+        ".write": "auth != null && auth.uid == $userId",
+        "$photoId": {
+          ".validate": "newData.hasChildren(['photoId', 'imageUrl', 'filename', 'timestamp', 'dateCreated', 'userId', 'status'])",
+          "photoId": {
+            ".validate": "newData.isString() && newData.val().length > 0"
+          },
+          "imageUrl": {
+            ".validate": "newData.isString() && newData.val().length > 0"
+          },
+          "filename": {
+            ".validate": "newData.isString() && newData.val().length > 0"
+          },
+          "timestamp": {
+            ".validate": "newData.isString() && newData.val().length > 0"
+          },
+          "dateCreated": {
+            ".validate": "newData.isString() && newData.val().length > 0"
+          },
+          "userId": {
+            ".validate": "newData.isString() && newData.val() == auth.uid"
+          },
+          "status": {
+            ".validate": "newData.isString() && (newData.val() == 'active' || newData.val() == 'resolved' || newData.val() == 'archived')"
+          },
+          "notes": {
+            ".validate": "newData.isString()"
+          },
+          "severity": {
+            ".validate": "newData.isString() && (newData.val() == 'unknown' || newData.val() == 'mild' || newData.val() == 'moderate' || newData.val() == 'severe')"
+          }
+        }
+      }
+    },
+    "emergency": {
+      ".read": true,
+      "veterinarians": {
+        ".read": true,
+        ".write": "auth != null",
+        "$vetId": {
+          ".validate": "newData.hasChildren(['id', 'name', 'address', 'phone', 'latitude', 'longitude', 'isAvailable'])",
+          "id": {
+            ".validate": "newData.isString() && newData.val().length > 0"
+          },
+          "name": {
+            ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 100"
+          },
+          "address": {
+            ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 200"
+          },
+          "phone": {
+            ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 20"
+          },
+          "latitude": {
+            ".validate": "newData.isNumber() && newData.val() >= -90 && newData.val() <= 90"
+          },
+          "longitude": {
+            ".validate": "newData.isNumber() && newData.val() >= -180 && newData.val() <= 180"
+          },
+          "isAvailable": {
+            ".validate": "newData.isBoolean()"
+          },
+          "is24Hour": {
+            ".validate": "newData.isBoolean()"
+          },
+          "specialties": {
+            ".validate": "newData.isString()"
+          },
+          "rating": {
+            ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 5"
+          },
+          "responseTimeMinutes": {
+            ".validate": "newData.isNumber() && newData.val() >= 0"
+          }
+        }
+      },
+      "contacts": {
+        ".read": true,
+        ".write": "auth != null",
+        "$contactId": {
+          ".validate": "newData.hasChildren(['id', 'name', 'phone', 'type', 'isActive'])",
+          "id": {
+            ".validate": "newData.isString() && newData.val().length > 0"
+          },
+          "name": {
+            ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 100"
+          },
+          "phone": {
+            ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 20"
+          },
+          "type": {
+            ".validate": "newData.isString() && (newData.val() == 'hotline' || newData.val() == 'poison_control' || newData.val() == 'animal_hospital')"
+          },
+          "isActive": {
+            ".validate": "newData.isBoolean()"
+          },
+          "description": {
+            ".validate": "newData.isString()"
+          },
+          "availability": {
+            ".validate": "newData.isString()"
+          }
+        }
+      },
+      "alerts": {
+        ".read": true,
+        ".write": "auth != null",
+        "$alertId": {
+          ".validate": "newData.hasChildren(['id', 'title', 'message', 'type', 'severity', 'isActive', 'timestamp'])",
+          "id": {
+            ".validate": "newData.isString() && newData.val().length > 0"
+          },
+          "title": {
+            ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 100"
+          },
+          "message": {
+            ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 500"
+          },
+          "type": {
+            ".validate": "newData.isString() && (newData.val() == 'weather' || newData.val() == 'disease_outbreak' || newData.val() == 'recall' || newData.val() == 'general')"
+          },
+          "severity": {
+            ".validate": "newData.isString() && (newData.val() == 'low' || newData.val() == 'medium' || newData.val() == 'high' || newData.val() == 'critical')"
+          },
+          "isActive": {
+            ".validate": "newData.isBoolean()"
+          },
+          "timestamp": {
+            ".validate": "newData.isNumber()"
+          },
+          "region": {
+            ".validate": "newData.isString()"
+          }
+        }
+      },
+      "reports": {
+        ".read": "auth != null",
+        ".write": "auth != null",
+        "$reportId": {
+          ".validate": "newData.hasChildren(['id', 'latitude', 'longitude', 'description', 'timestamp', 'status', 'userId'])",
+          "id": {
+            ".validate": "newData.isString() && newData.val().length > 0"
+          },
+          "latitude": {
+            ".validate": "newData.isNumber() && newData.val() >= -90 && newData.val() <= 90"
+          },
+          "longitude": {
+            ".validate": "newData.isNumber() && newData.val() >= -180 && newData.val() <= 180"
+          },
+          "description": {
+            ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 500"
+          },
+          "timestamp": {
+            ".validate": "newData.isNumber()"
+          },
+          "status": {
+            ".validate": "newData.isString() && (newData.val() == 'active' || newData.val() == 'resolved' || newData.val() == 'closed')"
+          },
+          "userId": {
+            ".validate": "newData.isString() && newData.val() == auth.uid"
+          },
+          "petInfo": {
+            ".validate": "newData.isString()"
+          }
+        }
+      }
+    }
+  }
+}

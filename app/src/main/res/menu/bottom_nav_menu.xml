@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/nav_pets"
+        android:icon="@drawable/ic_pets"
+        android:title="My Pets" />
+
+    <item
+        android:id="@+id/nav_shop"
+        android:icon="@drawable/ic_shop"
+        android:title="Shop" />
+
+    <item
+        android:id="@+id/nav_blogs"
+        android:icon="@drawable/ic_blog"
+        android:title="Blogs" />
+
+    <item
+        android:id="@+id/nav_notification"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:title="Notify" />
+
+
+    <item
+        android:id="@+id/nav_more"
+        android:icon="@drawable/ic_more"
+        android:title="More" />
+
+</menu>

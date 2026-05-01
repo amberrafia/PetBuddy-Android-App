@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.petbuddy">
+
+    <!-- Notifications permission (Android 13+) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.TURN_SCREEN_ON"/>
+    <uses-permission android:name="android.permission.SHOW_WHEN_LOCKED"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    
+    <!-- Location permissions for emergency features -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    
+    <!-- Voice recognition query -->
+    <queries>
+        <intent>
+            <action android:name="android.speech.RecognitionService" />
+        </intent>
+    </queries>
+
+
+
+
+    <application
+        android:name=".PetBuddyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PetBuddy">
+
+        <!-- File Provider for sharing injury photos -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- Splash -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".PetBuddyMainActivity"
+            android:exported="true" />
+
+        <!-- Auth -->
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".SignupActivity"/>
+
+        <!-- Community -->
+        <activity android:name=".CommunityActivity"
+            android:parentActivityName=".PetBuddyMainActivity"/>
+        <activity android:name=".EditCommunityPostActivity"
+            android:parentActivityName=".CommunityActivity"/>
+
+        <!-- Veterinarian -->
+        <activity android:name=".VeterinarianActivity"
+            android:parentActivityName=".PetBuddyMainActivity"/>
+        <activity android:name=".EditVeterinarianActivity"
+            android:parentActivityName=".VeterinarianActivity"/>
+
+        <!-- Chat -->
+        <activity android:name=".ChatUsersActivity"
+            android:parentActivityName=".PetBuddyMainActivity"/>
+        <activity android:name=".ChatActivity"
+            android:parentActivityName=".ChatUsersActivity"/>
+        <activity android:name=".AIChatActivity"
+            android:parentActivityName=".PetBuddyMainActivity"/>
+
+        <!-- Events -->
+        <activity android:name=".EventsActivity"
+            android:parentActivityName=".PetBuddyMainActivity"/>
+        <activity android:name=".EventDetailsActivity"
+            android:parentActivityName=".EventsActivity"/>
+        <activity android:name=".RegisteredUsersActivity"
+            android:parentActivityName=".EventDetailsActivity"/>
+        <activity android:name=".EditEventActivity"
+            android:parentActivityName=".EventsActivity"/>
+
+        <!-- Adopt Pet -->
+        <activity android:name=".AdoptPetActivity"
+            android:parentActivityName=".PetBuddyMainActivity"/>
+        <activity android:name=".PetDetailsActivity"
+            android:parentActivityName=".AdoptPetActivity"/>
+        <activity android:name=".EditPetProfileActivity"
+            android:parentActivityName=".AdoptPetActivity"/>
+        <activity android:name=".AddPetActivity"
+            android:parentActivityName=".AdoptPetActivity"/>
+
+        <!-- Admin Data Populator -->
+        <activity android:name=".AdminDataPopulatorActivity"
+            android:parentActivityName=".PetBuddyMainActivity"/>
+
+        <!-- Training Videos -->
+        <activity android:name=".TrainingVideosActivity"
+            android:parentActivityName=".PetBuddyMainActivity"/>
+
+        <!-- Video Player -->
+        <activity android:name=".VideoPlayerActivity"
+            android:parentActivityName=".TrainingVideosActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+
+        <!-- Video Test Activity (for debugging) -->
+        <activity android:name=".VideoTestActivity"
+            android:exported="false"/>
+
+        <!-- Reminder -->
+        <receiver
+            android:name=".ReminderReceiver"
+            android:exported="false"/>
+        
+        <!-- Pet Care Notifications -->
+        <receiver
+            android:name=".PetCareReminderReceiver"
+            android:exported="false"/>
+        <receiver
+            android:name=".NotificationActionReceiver"
+            android:exported="false"/>
+        <activity
+            android:name=".PetCarePopupActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:launchMode="singleTop"
+            android:excludeFromRecents="true"
+            android:showOnLockScreen="true"
+            android:turnScreenOn="true"
+            android:showWhenLocked="true"/>
+        
+        <!-- Boot receiver to restart notifications after device restart -->
+        <receiver
+            android:name=".BootReceiver"
+            android:exported="true"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name=".SimpleNotificationService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="reminder"/>
+        </service>
+            
+        <activity
+            android:name=".FullScreenVideoActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+
+    </application>
+
+</manifest>

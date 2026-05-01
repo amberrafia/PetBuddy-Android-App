@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="14dp"
+    android:layout_marginBottom="12dp"
+    android:background="#1E1E1E">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🐶 Dry Food Eating Tips"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#C9A7FF"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="• Always provide fresh water with dry food\n\n• Measure portions to avoid overfeeding\n\n• Soak dry food for puppies or senior dogs\n\n• Stick to feeding timings daily\n\n• Store food in airtight containers"
+        android:textColor="#E0E0E0"
+        android:textSize="14sp"/>
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Gradient Background -->
+    <item>
+        <shape>
+            <gradient
+                android:angle="135"
+                android:startColor="#FFF8E1"
+                android:centerColor="#FFE0B2"
+                android:endColor="#FFCCBC"
+                android:type="linear" />
+        </shape>
+    </item>
+
+    <!-- Top Left - Small Dog -->
+    <item android:top="40dp" android:left="20dp" android:width="60dp" android:height="60dp">
+        <shape android:shape="oval">
+            <solid android:color="#40FF7043"/>
+        </shape>
+    </item>
+
+    <!-- Top Right - Cat -->
+    <item android:top="80dp" android:right="30dp" android:width="50dp" android:height="50dp">
+        <shape android:shape="oval">
+            <solid android:color="#40FFA726"/>
+        </shape>
+    </item>
+
+    <!-- Middle Left - Paw -->
+    <item android:top="200dp" android:left="40dp" android:width="40dp" android:height="40dp">
+        <rotate android:fromDegrees="20">
+            <shape android:shape="oval">
+                <solid android:color="#30FF7043"/>
+            </shape>
+        </rotate>
+    </item>
+
+    <!-- Middle Right - Heart -->
+    <item android:top="250dp" android:right="50dp" android:width="35dp" android:height="35dp">
+        <shape android:shape="oval">
+            <solid android:color="#30E91E63"/>
+        </shape>
+    </item>
+
+    <!-- Bottom Left - Small Cat -->
+    <item android:bottom="150dp" android:left="30dp" android:width="45dp" android:height="45dp">
+        <shape android:shape="oval">
+            <solid android:color="#35FFA726"/>
+        </shape>
+    </item>
+
+    <!-- Bottom Right - Dog Paw -->
+    <item android:bottom="100dp" android:right="40dp" android:width="50dp" android:height="50dp">
+        <rotate android:fromDegrees="-15">
+            <shape android:shape="oval">
+                <solid android:color="#35FF7043"/>
+            </shape>
+        </rotate>
+    </item>
+
+    <!-- Scattered small elements -->
+    <item android:top="350dp" android:left="70dp" android:width="25dp" android:height="25dp">
+        <shape android:shape="oval">
+            <solid android:color="#20FF7043"/>
+        </shape>
+    </item>
+
+    <item android:top="450dp" android:right="80dp" android:width="30dp" android:height="30dp">
+        <shape android:shape="oval">
+            <solid android:color="#20FFA726"/>
+        </shape>
+    </item>
+
+    <item android:bottom="250dp" android:left="60dp" android:width="28dp" android:height="28dp">
+        <shape android:shape="oval">
+            <solid android:color="#25FF7043"/>
+        </shape>
+    </item>
+
+    <item android:bottom="200dp" android:right="70dp" android:width="32dp" android:height="32dp">
+        <shape android:shape="oval">
+            <solid android:color="#25FFA726"/>
+        </shape>
+    </item>
+</layer-list>

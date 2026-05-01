@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#FDECEF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Clinic Name -->
+        <TextView
+            android:id="@+id/txtClinicName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🏥 Happy Paws Veterinary Clinic"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2D5F5D"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Doctor Name -->
+        <TextView
+            android:id="@+id/txtDoctorName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👨‍⚕️ Dr. Sharma"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="6dp"/>
+
+        <!-- Experience -->
+        <TextView
+            android:id="@+id/txtExperience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⭐ 8 Years Experience"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="6dp"/>
+
+        <!-- Contact -->
+        <TextView
+            android:id="@+id/txtContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📞 +91 9876543210"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="6dp"/>
+
+        <!-- Timing -->
+        <TextView
+            android:id="@+id/txtTiming"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🕐 9:00 AM - 6:00 PM"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="6dp"/>
+
+        <!-- Address -->
+        <TextView
+            android:id="@+id/txtAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📍 MG Road, Delhi"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Specialization (if available) -->
+        <TextView
+            android:id="@+id/txtSpecialization"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💊 Small Animals"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            android:textColor="#888888"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

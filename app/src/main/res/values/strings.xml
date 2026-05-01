@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">PetBuddy</string>
+
+    <string name="my_profile">My Profile</string>
+
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+
+    <!-- Add here 👇 -->
+    <string name="hint_name">Name</string>
+    <string name="hint_email">Email</string>
+
+    <string name="close">Close</string>
+    <string name="edit">Edit</string>
+    <string name="logout">Logout</string>
+
+</resources>

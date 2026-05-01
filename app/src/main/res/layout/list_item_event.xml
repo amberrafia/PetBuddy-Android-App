@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/txtEventTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Event Title"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#333333"/>
+
+            <TextView
+                android:id="@+id/txtEventCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎾 Pet Activity"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:background="#E8F5E8"
+                android:padding="4dp"
+                android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/txtEventDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Event description goes here..."
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Date and Time -->
+        <TextView
+            android:id="@+id/txtEventDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📅 Date • ⏰ Time"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Location -->
+        <TextView
+            android:id="@+id/txtEventLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📍 Location"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Organizer -->
+        <TextView
+            android:id="@+id/txtEventOrganizer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👥 Organized by: Organizer Name"
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Participants -->
+        <TextView
+            android:id="@+id/txtEventParticipants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👥 0/50 participants • 50 slots available"
+            android:textSize="12sp"
+            android:textColor="#4CAF50"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Requirements -->
+        <TextView
+            android:id="@+id/txtEventRequirements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📋 Requirements: Bring your pet on a leash"
+            android:textSize="12sp"
+            android:textColor="#FF9800"
+            android:background="#FFF3E0"
+            android:padding="8dp"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone"/>
+
+        <!-- Register Button -->
+        <Button
+            android:id="@+id/btnRegisterEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#4CAF50"
+            android:padding="12dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

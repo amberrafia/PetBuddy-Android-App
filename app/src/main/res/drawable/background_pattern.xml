@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape>
+            <gradient
+                android:angle="135"
+                android:startColor="#FFF3E0"
+                android:centerColor="#FFE0B2"
+                android:endColor="#FFCCBC"
+                android:type="linear" />
+        </shape>
+    </item>
+
+
+    <item android:top="50dp" android:left="30dp">
+        <rotate
+            android:fromDegrees="15"
+            android:pivotX="50%"
+            android:pivotY="50%">
+            <shape android:shape="oval">
+                <size android:width="20dp" android:height="20dp"/>
+                <solid android:color="#20FF7043"/>
+            </shape>
+        </rotate>
+    </item>
+
+    <item android:top="150dp" android:right="40dp">
+        <rotate
+            android:fromDegrees="-20"
+            android:pivotX="50%"
+            android:pivotY="50%">
+            <shape android:shape="oval">
+                <size android:width="25dp" android:height="25dp"/>
+                <solid android:color="#20FF7043"/>
+            </shape>
+        </rotate>
+    </item>
+
+    <item android:bottom="100dp" android:left="50dp">
+        <rotate
+            android:fromDegrees="30"
+            android:pivotX="50%"
+            android:pivotY="50%">
+            <shape android:shape="oval">
+                <size android:width="18dp" android:height="18dp"/>
+                <solid android:color="#20FFA726"/>
+            </shape>
+        </rotate>
+    </item>
+
+    <item android:bottom="200dp" android:right="60dp">
+        <rotate
+            android:fromDegrees="-10"
+            android:pivotX="50%"
+            android:pivotY="50%">
+            <shape android:shape="oval">
+                <size android:width="22dp" android:height="22dp"/>
+                <solid android:color="#20FFA726"/>
+            </shape>
+        </rotate>
+    </item>
+
+    <item android:top="300dp" android:left="80dp">
+        <shape android:shape="oval">
+            <size android:width="15dp" android:height="15dp"/>
+            <solid android:color="#15FF7043"/>
+        </shape>
+    </item>
+
+    <item android:top="400dp" android:right="70dp">
+        <shape android:shape="oval">
+            <size android:width="20dp" android:height="20dp"/>
+            <solid android:color="#15FFA726"/>
+        </shape>
+    </item>
+</layer-list>

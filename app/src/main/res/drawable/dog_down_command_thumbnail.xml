@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Background gradient -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#8BC34A"
+                android:endColor="#4CAF50"
+                android:angle="45" />
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+    
+    <!-- DOWN text overlay -->
+    <item android:gravity="center">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" />
+            <corners android:radius="8dp" />
+            <size android:width="80dp" android:height="30dp" />
+        </shape>
+    </item>
+    
+</layer-list>
