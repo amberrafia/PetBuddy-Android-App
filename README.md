@@ -31,3 +31,23 @@ Developed complete Android application including UI design, Firebase integration
 - Chat Support
 - Dark Mode
 - Better UI
+
+- ## Screenshots
+
+### Splash Screen
+![Splash](screenshots/splash%20screen.jpg)
+
+### Home Page
+![Home](screenshots/home%20page.jpg)
+
+### Profile Page
+![Profile](screenshots/profile.jpg)
+
+### Blog Section
+![Blog](screenshots/blog%20section.jpg)
+
+### More Section
+![More](screenshots/more%20section.jpg)
+
+### App Logo
+![Logo](screenshots/logo.jpg)
