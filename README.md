@@ -32,7 +32,10 @@ Developed complete Android application including UI design, Firebase integration
 - Dark Mode
 - Better UI
 
-- ## Screenshots
+## Screenshots
+
+### App Logo
+![Logo](screenshots/logo.jpg)
 
 ### Splash Screen
 ![Splash](screenshots/splash%20screen.jpg)
@@ -48,6 +51,3 @@ Developed complete Android application including UI design, Firebase integration
 
 ### More Section
 ![More](screenshots/more%20section.jpg)
-
-### App Logo
-![Logo](screenshots/logo.jpg)
