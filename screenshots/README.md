@@ -1,0 +1,1 @@
+PetBuddy screenshots folder.
